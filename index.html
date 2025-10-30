@@ -3,37 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almas Anjum</title>
+    <title>Almas anjum</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-name">
-            Almas anjum
+    <header class="site-header" role="banner">
+        <div class="header-content">
+            <div class="logo">Almas anjum</div>
+            
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" role="navigation">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="header-nav">
-            <a href="#about">about me</a>
-            <a href="#projects">projects</a>
-            <a href="#interests">interests</a>
-            <a href="#contact">contact</a>
-        </nav>
     </header>
 
-    <main class="page-content">
-        <section id="about" class="dummy-section" style="background-color: #e0e0e0;">
-            <h2>About Me</h2>
+    <main role="main">
+
+        <section id="about" class="page-section" role="region" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <div class="placeholder-content">
+                <p>Your "About Me" content will go here. You can replace this placeholder block with paragraphs, lists, or other elements.</p>
+            </div>
         </section>
-        <section id="projects" class="dummy-section" style="background-color: #f0f0f0;">
-            <h2>Projects</h2>
+
+        <section id="projects" class="page-section" role="region" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <div class="placeholder-content">
+                <p>Your "Projects" content will go here. You could use a grid or a list of cards to showcase your work.</p>
+            </div>
         </section>
-        <section id="interests" class="dummy-section" style="background-color: #e0e0e0;">
-            <h2>Interests</h2>
+
+        <section id="interests" class="page-section" role="region" aria-labelledby="interests-heading">
+            <h2 id="interests-heading">Interests</h2>
+            <div class="placeholder-content">
+                <p>Your "Interests" content will go here. Talk about your hobbies, passions, and other professional interests.</p>
+            </div>
         </section>
-        <section id="contact" class="dummy-section" style="background-color: #f0f0f0;">
-            <h2>Contact</h2>
+
+        <section id="contact" class="page-section" role="region" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <div class="placeholder-content">
+                <p>Your "Contact" information or a contact form will go here.</p>
+            </div>
         </section>
+
     </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <p>&copy; 2025 Almas anjum. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
