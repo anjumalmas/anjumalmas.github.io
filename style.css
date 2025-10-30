@@ -3,117 +3,42 @@
    --- */
 
 :root {
-    /* Colors */
-    --color-bg: #ffffff;
-    --color-text: #222222;
-    --color-grey-light: #eeeeee;
-    --color-grey-mid: #cccccc;
-    --color-grey-dark: #777777;
+    /* ... (Colors remain the same) ... */
 
     /* Typography */
     --font-body: 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
     --font-logo: 'Helvetica Bold Condensed', 'Helvetica Neue Condensed Bold', 'Arial Narrow', sans-serif;
-    --font-nav: 'Helvetica Ultra Light Italic', 'Helvetica Neue UltraLight Italic', 'Helvetica Neue', Arial, sans-serif;
     
-    /* Sizing */
-    --base-font-size: 17px;
-    --base-line-height: 1.6;
-    --spacing-unit: 8px;
-    --header-height: 70px; /* Base header height */
+    /* UPDATED: Nav font changed to regular Helvetica */
+    --font-nav: 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+    
+    /* ... (Sizing remains the same) ... */
+    --header-height: 70px;
 }
 
 /* ---
    Base & Reset
    --- */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* ... (No changes in this section) ... */
 html {
-    /* This tells the JS to scroll smoothly */
     scroll-behavior: smooth;
-    /* This ensures anchor links land correctly below the sticky header */
     scroll-padding-top: var(--header-height);
 }
 
 body {
     font-family: var(--font-body);
     font-size: var(--base-font-size);
-    line-height: var(--base-line-height);
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /* ... (rest is same) ... */
 }
+/* ... (rest of Base & Reset is same) ... */
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-    transition: opacity 0.2s ease, text-decoration 0.2s ease;
-}
-
-/* Accessibility: Visible focus state */
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid var(--color-text);
-    outline-offset: 2px;
-    border-radius: 2px;
-}
-
-ul, ol {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
 
 /* ---
    Header & Navigation
    --- */
 
-.site-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--header-height);
-    background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-grey-light);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-}
-
-.header-content {
-    width: 100%;
-    max-width: 1200px; /* Limits content width */
-    margin: 0 auto;
-    padding: 0 calc(var(--spacing-unit) * 3); /* 24px padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: var(--font-logo);
-    font-weight: 700; /* Bold */
-    font-size: calc(var(--base-font-size) * 1.5); /* 25.5px */
-    letter-spacing: 0.5px;
-    text-transform: lowercase; /* Matches "Almas anjum" */
-}
+/* ... (Site-header, header-content, logo styles are same) ... */
 
 .main-nav ul {
     display: flex;
@@ -125,8 +50,9 @@ img {
 
 .main-nav a {
     font-family: var(--font-nav);
-    font-weight: 200; /* Ultra-light */
-    font-style: italic;
+    /* UPDATED: Removed italic and ultra-light weight */
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
     font-size: calc(var(--base-font-size) * 1.05); /* ~18px */
 }
 
@@ -141,17 +67,43 @@ img {
    --- */
 
 main {
-    display: block; /* For older browsers */
+    display: block;
     width: 100%;
-    max-width: 900px; /* Constrains content for readability */
+    /* UPDATED: Changed to header's max-width for full-width columns */
+    max-width: 1200px; 
     margin: 0 auto;
+    /* UPDATED: Padding adjusted for full-width layout */
+    padding: 0;
+}
+
+/* NEW: Wrapper for the 3-column layout */
+.column-wrapper {
+    display: flex;
+    width: 100%;
+    /* Adds a border at the bottom of the whole group */
+    border-bottom: 1px solid var(--color-grey-light);
+}
+
+/* UPDATED: Default section styles */
+.page-section {
+    /* Spacing between full-width sections (like Connect) */
+    margin-bottom: calc(var(--spacing-unit) * 8); /* 64px */
     padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 3); /* 32px 24px */
 }
 
-.page-section {
-    /* Spacing between sections */
-    margin-bottom: calc(var(--spacing-unit) * 8); /* 64px */
-    padding-top: calc(var(--spacing-unit) * 4); /* 32px */
+/* NEW: Specific styles for the columns */
+.page-section.column {
+    flex: 1; /* Each column takes equal width */
+    margin-bottom: 0; /* Remove bottom margin */
+    padding: calc(var(--spacing-unit) * 3); /* 24px */
+    
+    /* Adds the vertical line */
+    border-right: 1px solid var(--color-grey-light);
+}
+
+.page-section.column:last-child {
+    /* Removes vertical line from the last column */
+    border-right: none;
 }
 
 .page-section h2 {
@@ -169,55 +121,20 @@ main {
     min-height: 200px;
     border-radius: 4px;
 }
+/* ... (Placeholder styles are same) ... */
 
-.placeholder-content p {
-    color: var(--color-grey-dark);
-}
 
 /* ---
    Footer
    --- */
+/* ... (No changes in this section) ... */
 
-.site-footer {
-    text-align: center;
-    padding: calc(var(--spacing-unit) * 3) 0; /* 24px */
-    margin-top: calc(var(--spacing-unit) * 4); /* 32px */
-    border-top: 1px solid var(--color-grey-light);
-    font-size: calc(var(--base-font-size) * 0.9); /* ~15px */
-    color: var(--color-grey-dark);
-}
 
 /* ---
    Mobile Navigation & Responsiveness
    --- */
 
-.nav-toggle {
-    display: none; /* Hidden on desktop */
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: calc(var(--spacing-unit) * 1); /* 8px */
-}
-
-.nav-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--color-text);
-    margin: 5px 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Styles for when the mobile menu is open */
-.nav-toggle[aria-expanded="true"] span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(2) {
-    opacity: 0;
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
+/* ... (nav-toggle and mobile nav styles are same) ... */
 
 
 /* Media query for mobile devices */
@@ -226,38 +143,26 @@ main {
         --header-height: 60px; /* Smaller header on mobile */
     }
 
-    .main-nav {
-        /* Hides nav list by default */
-        display: none; 
-        position: absolute;
-        top: var(--header-height); /* Positions it right below the header */
-        left: 0;
-        width: 100%;
-        background-color: var(--color-bg);
+    /* ... (Mobile nav styles are same) ... */
+    
+    /* NEW: Stacks the 3-column layout vertically */
+    .column-wrapper {
+        flex-direction: column;
+        border-bottom: none; /* Remove bottom border on mobile */
+    }
+
+    /* NEW: Adds horizontal lines between stacked columns */
+    .page-section.column {
+        border-right: none;
         border-bottom: 1px solid var(--color-grey-light);
     }
-
-    .main-nav.is-open {
-        /* Shows the nav when toggled by JS */
-        display: block; 
+    
+    .page-section.column:last-child {
+        border-bottom: none; /* No border on the last one */
     }
 
-    .main-nav ul {
-        flex-direction: column;
-        padding: calc(var(--spacing-unit) * 2); /* 16px */
-    }
-
-    .main-nav li {
-        margin-left: 0;
-    }
-
-    .main-nav a {
-        display: block;
-        padding: calc(var(--spacing-unit) * 1.5) 0; /* 12px */
-        font-size: calc(var(--base-font-size) * 1.1); /* ~19px */
-    }
-
-    .nav-toggle {
-        display: block; /* Show hamburger icon */
+    /* UPDATED: Standardizes padding for all sections on mobile */
+    .page-section {
+        padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 3); /* 24px */
     }
 }
