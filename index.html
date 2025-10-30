@@ -1,155 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjum Almas - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name – Portfolio</title>
+
+  <!-- Fonts (mono for headings, clean sans for body) -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
 <body>
 
-    <div class="page-wrapper">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <img src="https://via.placeholder.com/40" alt="Logo" class="sidebar-logo"> <span>JEDI</span>
+  <div class="frame">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-badge">{ }</span>
+        <span class="brand-text">Portfolio</span>
+      </div>
+
+      <nav class="side-nav">
+        <a href="#about" class="nav-link">🏠 About</a>
+        <a href="#qualifications" class="nav-link">🎓 Qualifications</a>
+        <a href="#projects" class="nav-link">🧪 Projects</a>
+        <a href="#interests" class="nav-link">📚 Interests</a>
+        <a href="#contact" class="nav-link">✉️ Contact</a>
+      </nav>
+
+      <div class="side-footer">
+        <a class="btn small" href="My_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+      <!-- Hero / Profile card -->
+      <section class="card hero" id="top">
+        <div class="avatar" aria-hidden="true">
+          <!-- simple geometric avatar (no external image) -->
+          <div class="circle"></div>
+          <div class="square"></div>
+        </div>
+
+        <div class="hero-text">
+          <h1 class="title">Your Name</h1>
+          <p class="subtitle">Your Professional Headline (e.g., Software Developer)</p>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">10<span>+</span></div>
+              <div class="stat-label">Projects</div>
             </div>
-            <nav class="sidebar-nav">
-                <a href="#about" class="active"><i class="fas fa-user"></i> About Me</a>
-                <a href="#qualifications"><i class="fas fa-graduation-cap"></i> Qualifications</a>
-                <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-                <a href="#interests"><i class="fas fa-heart"></i> Interests</a>
-                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-            </nav>
-            <div class="sidebar-footer">
-                 <a href="#"><i class="fas fa-cog"></i> Preferences</a>
-                 <a href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            <div class="stat">
+              <div class="stat-num">5<span> yrs</span></div>
+              <div class="stat-label">Experience</div>
             </div>
-        </aside>
+            <div class="stat">
+              <div class="stat-num">3.9</div>
+              <div class="stat-label">GPA</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">12</div>
+              <div class="stat-label">Courses Taught/Taken</div>
+            </div>
+          </div>
 
-        <main class="main-content">
-            <header class="main-header">
-                <div class="header-search">
-                    <input type="text" placeholder="Search courses, trainers, etc...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <div class="header-actions">
-                    <i class="fas fa-bell"></i>
-                    <i class="fas fa-user-circle"></i>
-                </div>
-            </header>
+          <div class="hero-actions">
+            <a class="btn" href="mailto:your.email@example.com">Email me</a>
+            <a class="btn outline" href="#projects">See my work</a>
+          </div>
+        </div>
+      </section>
 
-            <section id="hero" class="card hero-section">
-                <div class="hero-left">
-                    <img src="your-photo.jpg" alt="Anjum Almas" class="profile-photo"> <h1>Anjum Almas</h1>
-                    <p class="headline">Aspiring Software Developer & Computer Science Student</p>
-                    <div class="hero-stats">
-                        <span>💡 Quick Learner</span>
-                        <span>💻 Passionate Coder</span>
-                        <span>📚 Eager to Innovate</span>
-                    </div>
-                </div>
-                <div class="hero-right">
-                    <p>
-                        Hello! I'm Anjum Almas, a dedicated Computer Science student passionate about software development and creating impactful solutions. I thrive on challenges and am constantly exploring new technologies to build robust and efficient applications.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn primary-btn">Get In Touch</a>
-                        <a href="My_Resume.pdf" class="btn secondary-btn" target="_blank">Download Resume</a>
-                    </div>
-                </div>
-            </section>
+      <!-- About -->
+      <section class="card section" id="about">
+        <h2 class="section-title">About me</h2>
+        <p>
+          Your 3–5 sentence biography goes here. Mention your background,
+          areas of focus, and what you’re passionate about. Keep it crisp and
+          evidence-y: key topics, languages, and the outcomes you care about.
+        </p>
+      </section>
 
-            <section id="about" class="card">
-                <h2>About Me</h2>
-                <p>
-                    As a final-year B.S. in Computer Science student, I specialize in full-stack development with a strong foundation in Python, JavaScript, and SQL. My academic journey has equipped me with robust problem-solving skills and a keen eye for efficient algorithm design. I'm driven by a desire to contribute to innovative projects that leverage technology to solve real-world problems.
-                </p>
-                <p>
-                    I enjoy transforming complex ideas into practical and user-friendly applications. My experience extends to collaborative projects where I've honed my skills in version control (Git & GitHub) and agile methodologies. I am eager to apply my theoretical knowledge and practical skills in a dynamic professional environment.
-                </p>
-            </section>
+      <!-- Qualifications -->
+      <section class="card section" id="qualifications">
+        <h2 class="section-title">Qualifications</h2>
 
-            <section id="qualifications" class="card">
-                <h2>Qualifications</h2>
-                <div class="qual-block">
-                    <h3>Education</h3>
-                    <p>
-                        <strong>B.S. in Computer Science</strong><br>
-                        IIT, Expected 2024
-                    </p>
-                </div>
-                <div class="qual-block">
-                    <h3>Skills</h3>
-                    <ul class="skills-list">
-                        <li>Python (Django, Flask)</li>
-                        <li>JavaScript (React, Node.js)</li>
-                        <li>SQL (PostgreSQL, MySQL)</li>
-                        <li>Git & GitHub</li>
-                        <li>Data Structures & Algorithms</li>
-                        <li>Cloud Platforms (AWS Basics)</li>
-                        <li>Project Management (Agile/Scrum)</li>
-                        <li>Linux Environment</li>
-                    </ul>
-                </div>
-            </section>
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Education</h3>
+            <p><strong>B.S. in Computer Science</strong><br/>State University, 2024</p>
+          </div>
 
-            <section id="projects" class="card">
-                <h2>Projects</h2>
+          <div class="panel">
+            <h3>Skills</h3>
+            <ul class="tag-list">
+              <li class="tag">Python</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">SQL</li>
+              <li class="tag">Git/GitHub</li>
+              <li class="tag">Project Management</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-                <div class="project-item">
-                    <h3>Interactive Data Visualization Dashboard</h3>
-                    <p>
-                        Developed a web-based dashboard using React and D3.js to visualize complex datasets, providing interactive filters and real-time updates. Enhanced user experience for data analysis.
-                    </p>
-                    <p><strong>Technologies:</strong> React, D3.js, Node.js, Express</p>
-                    <a href="[YOUR GITHUB REPO LINK 1]" target="_blank" class="project-link">View Code <i class="fas fa-external-link-alt"></i></a>
-                </div>
+      <!-- Projects -->
+      <section class="card section" id="projects">
+        <h2 class="section-title">Projects</h2>
 
-                <div class="project-item">
-                    <h3>E-commerce Backend API</h3>
-                    <p>
-                        Built a robust RESTful API for an e-commerce platform using Python with Django REST Framework, including user authentication, product management, and order processing.
-                    </p>
-                    <p><strong>Technologies:</strong> Python, Django REST Framework, PostgreSQL</p>
-                    <a href="[YOUR GITHUB REPO LINK 2]" target="_blank" class="project-link">View Code <i class="fas fa-external-link-alt"></i></a>
-                </div>
+        <article class="project">
+          <header class="project-head">
+            <h3>Project Title 1</h3>
+            <span class="badge">React • Node.js • MongoDB</span>
+          </header>
+          <p>
+            Your 1–2 sentence description. What problem does it solve?
+            What impact/outcome did it have?
+          </p>
+          <a class="btn small" href="[YOUR GITHUB REPO LINK]" target="_blank" rel="noopener">View code</a>
+        </article>
 
-                <div class="project-item">
-                    <h3>Personal Blog System</h3>
-                    <p>
-                        Created a simple blog application from scratch using Flask, allowing users to create, read, update, and delete posts. Implemented markdown support and user comment functionality.
-                    </p>
-                    <p><strong>Technologies:</strong> Python, Flask, SQLite, HTML/CSS/JS</p>
-                    <a href="[YOUR GITHUB REPO LINK 3]" target="_blank" class="project-link">View Code <i class="fas fa-external-link-alt"></i></a>
-                </div>
+        <article class="project">
+          <header class="project-head">
+            <h3>Project Title 2</h3>
+            <span class="badge">Python • Flask • SQLite</span>
+          </header>
+          <p>
+            Short description for your second project. Highlight design choices,
+            performance or any academic framing (methods, evaluation).
+          </p>
+          <a class="btn small" href="[YOUR GITHUB REPO LINK]" target="_blank" rel="noopener">View code</a>
+        </article>
+      </section>
 
-            </section>
+      <!-- Interests -->
+      <section class="card section" id="interests">
+        <h2 class="section-title">Interests</h2>
+        <p>
+          When I'm not coding, I enjoy hiking, landscape photography, and
+          competitive chess. Recently exploring data visualization &amp; HCI.
+        </p>
+      </section>
 
-            <section id="interests" class="card">
-                <h2>Interests</h2>
-                <p>
-                    Beyond my academic pursuits, I am deeply interested in the advancements of Artificial Intelligence and Machine Learning, particularly in their applications to data science and automation. I often spend time exploring new libraries and frameworks in these areas.
-                </p>
-                <p>
-                    Outside of technology, I am an avid photographer, focusing on urban landscapes and astrophotography. This hobby allows me to combine technical precision with creative expression, much like coding. I also enjoy competitive online gaming, which sharpens my strategic thinking and problem-solving abilities under pressure.
-                </p>
-            </section>
+      <!-- Contact -->
+      <section class="card section" id="contact">
+        <h2 class="section-title">Contact &amp; Data</h2>
+        <div class="grid-2">
+          <div class="panel">
+            <ul class="contact-list">
+              <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+              <li><strong>LinkedIn:</strong> <a href="[YOUR LINKEDIN URL]" target="_blank" rel="noopener">Your LinkedIn</a></li>
+              <li><strong>GitHub:</strong> <a href="[YOUR GITHUB URL]" target="_blank" rel="noopener">Your GitHub</a></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <a class="btn wide" href="My_Resume.pdf" target="_blank" rel="noopener">Download my resume (PDF)</a>
+          </div>
+        </div>
+      </section>
 
-            <section id="contact" class="card contact-section">
-                <h2>Contact & Data</h2>
-                <p>Let's connect! Feel free to reach out or explore my professional networks.</p>
-                <ul class="contact-list">
-                    <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:your.email@example.com">anjum.almas@example.com</a></li>
-                    <li><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="[YOUR LINKEDIN URL]" target="_blank">linkedin.com/in/anjumalmas</a></li>
-                    <li><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="[YOUR GITHUB URL]" target="_blank">github.com/anjumalmas</a></li>
-                </ul>
-            </section>
-
-            <footer>
-                <p>&copy; 2024 Anjum Almas. All rights reserved.</p>
-            </footer>
-        </main>
-    </div>
+      <footer class="footer">
+        <p>&copy; 2025 Your Name. Built with HTML &amp; CSS.</p>
+        <a class="to-top" href="#top">↑ Back to top</a>
+      </footer>
+    </main>
+  </div>
 
 </body>
 </html>
+
